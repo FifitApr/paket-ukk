@@ -1,6 +1,6 @@
-@extends('starter')
+@extends('starter1')
 @section('judul','Form Tambah')
-    @section('isi')
+    @section('isi1')
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-8">
@@ -27,20 +27,21 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Tipe Kamar</label>
-                            <select name="tipekamar" class="form-select-form-control" id="">
-                                <option selected>Pilih Tipe Kamar</option>
+                            <select name="tipekamar" class="form-select form-control" id="">
+                                <option selected>Pilih tipe kamar</option>
                                 <option value="Superior">Superior</option>
                                 <option value="Deluxe">Deluxe</option>
                             </select>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Tanggal Check In</label>
-                            <input type="datetime"class="form-control " name="tgl_cekin">
+                            <input type="date"class="form-control " name="tgl_cekin">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Tanggal Check Out</label>
-                            <input type="datetime"class="form-control " name="tgl_cekout">
+                            <input type="date"class="form-control " name="tgl_cekout">
                         </div>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
                         </form>
                     </div>
                 </div>

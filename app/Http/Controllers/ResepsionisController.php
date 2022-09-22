@@ -14,8 +14,8 @@ class ResepsionisController extends Controller
      */
     public function index()
     {
-        $resepsionis =resepsionis::all();
-        return view('Resepsionis.tampil', compact('resepsionis'));
+        $resep =resepsionis::all();
+        return view('Resepsionis.tampil', compact('resep'));
     }
 
     /**
@@ -25,7 +25,7 @@ class ResepsionisController extends Controller
      */
     public function create()
     {
-        return view('Resepsionis.tampil');
+        return view('Resepsionis.tambah');
     }
 
     /**
@@ -68,8 +68,8 @@ class ResepsionisController extends Controller
      */
     public function edit($id)
     {
-        $resepsionis=resepsionis::findorfail($id);
-        return view('Resepsionis.edit',compact('resepsionis'));
+        $resep=resepsionis::findorfail($id);
+        return view('Resepsionis.edit',compact('resep'));
     }
 
     /**
@@ -90,8 +90,8 @@ class ResepsionisController extends Controller
             'tgl_cekin' => 'required',
             'tgl_cekout' => 'required',
         ]);
-        $resepsionis=resepsionis::findorfail($id);
-        $resepsionis->update($request->all());
+        $resep=resepsionis::findorfail($id);
+        $resep->update($request->all());
 
         return Redirect('/resep')->with('success', 'Data Berhasil Diupdate');
     }
@@ -104,8 +104,8 @@ class ResepsionisController extends Controller
      */
     public function destroy($id)
     {
-        $resepsionis=resepsionis::findorfail($id);
-        $resepsionis->delete();
+        $resep=resepsionis::findorfail($id);
+        $resep->delete();
         return back()->with('destroy','data berhasil dihapus');
     }
 }

@@ -1,12 +1,12 @@
-@extends('starter')
+@extends('starter1')
 
 @section('Judul', 'Resepsionis')
-@section('isi')
+@section('isi1')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-10">
             <div class="card">
-                <div class="card-body">
+                <div class="card-body table-responsive">
                     <h1 class="text-center">Resepsionis</h1>
                     @if ($message = Session::get('success'))
                     <div class="alert alert-success" role="alert">
@@ -33,7 +33,7 @@
                           </tr>
                         </thead>
                         <tbody>
-                            @foreach ($resepsionis as $item)
+                            @foreach ($resep as $item)
                           <tr>
                             <th scope="row">{{ $loop->iteration }}</th>
                             <td>{{ $item->nm_pemesan }}</td>
