@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin_KamarController;
 use App\Http\Controllers\Admin_FHotelController;
 use App\Http\Controllers\Admin_FKamarController;
+use App\Http\Controllers\ResepsionisController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,3 +52,14 @@ Route::get('/edit-fkamar/{id}', [Admin_FKamarController::class, 'edit']);
 Route::put('/update-fkamar/{id}', [Admin_FKamarController::class, 'update'])->name('update-fkamar');
 
 Route::delete('/delete-fkamar/{id}', [Admin_FKamarController::class, 'destroy']);
+
+//RESEPSIONIS
+Route::get('/resep', [ResepsionisController::class, 'index']);
+Route::get('/create-resep', [ResepsionisController::class, 'create']);
+Route::post('/save-resep', [ResepsionisController::class, 'store'])->name('simpan-resep');
+
+
+Route::get('/edit-resep/{id}', [ResepsionisController::class, 'edit']);
+Route::put('/update-resep/{id}', [ResepsionisController::class, 'update'])->name('update-resep');
+
+Route::delete('/delete-resep/{id}', [ResepsionisController::class, 'destroy']);

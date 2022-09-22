@@ -13,16 +13,10 @@
                         <div class="mb-3">
                             <label class="form-label">Nama Fasilitas</label>
                             <input type="text" class="form-control" name="nm_fasilitas" value="{{ $adminfkamar->nm_fasilitas }}">
-                            @error('nm_fasilitas')
-                                <div class="text-danger">{{ $message }}</div>
-                            @enderror
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Keterangan</label>
                             <input type="text" class="form-control" name="ket" value="{{ $adminfkamar->ket }}">
-                            @error('nm_fasilitas')
-                                <div class="text-danger">{{ $message }}</div>
-                            @enderror
                         </div>
                         <div class="input-group mb-3"> 
                             <input type="file" class="form-control" id="inputGroupFile02" name="gambar">
