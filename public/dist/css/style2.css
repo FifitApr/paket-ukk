@@ -1,0 +1,114 @@
+*{
+    font-family: 'EB Garamond', serif;
+}
+p{
+    font-size: large;
+}
+/* NAVBAR */
+.logo{
+    width: 125px;
+    height: 55px;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.navbar-nav{
+    margin-right: 15px;
+}
+.nav-link{
+    font-size: 17px;
+    color: #22577E;
+}
+.nav-link:hover{
+    font-weight: bolder;
+    color: #22577E;
+}
+.btn{
+    background-color: white;
+    border: #22577E solid 1px;
+    color: #22577E;
+    height:40px;
+}
+.btn:hover{
+    background-color: #22577E;
+    color: white;
+}
+.dropdown-item{
+    color: #22577E;
+}
+.dropdown-item:hover{
+    background-color: #22577E;
+    color: white;
+}
+/* HEADER */
+.header{
+    height: 70vh;
+    background: url("https://images.pexels.com/photos/518244/pexels-photo-518244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box-header{
+    width: 30rem;
+    padding: 5px;
+    background-color: white;
+    margin-top: 14.5rem;
+}
+h2{
+    font-weight: bold;
+    font-size: 70px;
+    color: #22577E;
+    font-family: 'Poppins', sans-serif;
+}
+/* BOOK */
+.box-book{
+    background-color: white;
+    margin-top: -70px;
+    border-radius: 10px;
+    height: 9rem;
+    width: 60rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.box-book1{
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.btnn{
+    text-decoration: none;
+    background-color: white;
+    border: #22577E solid 1px;
+    color: #22577E;
+    height:40px;
+    margin-top: 31px;
+    border-radius: 5px;
+}
+.btnn:hover{
+    background-color: #22577E;
+    color: white;
+}
+/* FORM */
+.box-form{
+    border-radius: 10px;
+    padding: 20px 50px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.table{
+    text-align: center;
+    border-radius: 10px;
+    margin: 700px 0 70px 0;
+    width: 73rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.btnnn{
+    padding: 1px 10px;
+    background-color: white;
+    border-radius: 5px;
+    border: black 1px solid;
+}
+.btnnn:hover{
+    padding: 1px 10px;
+    background-color: red;
+    border: none;
+    color: white;
+}

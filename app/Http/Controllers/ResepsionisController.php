@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tamu;
 use App\Models\resepsionis;
 use Illuminate\Http\Request;
 
@@ -14,8 +15,9 @@ class ResepsionisController extends Controller
      */
     public function index()
     {
-        $resep =resepsionis::all();
-        return view('Resepsionis.tampil', compact('resep'));
+        $tamu = Tamu::all();
+        $resep = resepsionis::all();
+        return view('Resepsionis.tampil', compact('resep', 'tamu'));
     }
 
     /**
@@ -37,13 +39,14 @@ class ResepsionisController extends Controller
     public function store(Request $request)
     {
         resepsionis::create([
+            'tgl_cekin' => $request->tgl_cekin,
+            'tgl_cekout' => $request->tgl_cekout,
+            'jml_kamar' => $request->jml_kamar,
             'nm_pemesan' => $request->nm_pemesan,
             'email' => $request->email,
             'no_hp' => $request->no_hp,
             'nm_tamu' => $request->nm_tamu,
             'tipekamar' => $request->tipekamar,
-            'tgl_cekin' => $request->tgl_cekin,
-            'tgl_cekout' => $request->tgl_cekout,
         ]);
 
         return Redirect('/resep')->with('success', 'Data Berhasil Ditambahkan');
@@ -82,13 +85,14 @@ class ResepsionisController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request,[
+            'tgl_cekin' => 'required',
+            'tgl_cekout' => 'required',
+            'jml_kamar' => 'required',
             'nm_pemesan' => 'required',
             'email' => 'required',
             'no_hp' => 'required',
             'nm_tamu' => 'required',
             'tipekamar' => 'required',
-            'tgl_cekin' => 'required',
-            'tgl_cekout' => 'required',
         ]);
         $resep=resepsionis::findorfail($id);
         $resep->update($request->all());

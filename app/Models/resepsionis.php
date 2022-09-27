@@ -2,18 +2,25 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Tamu;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class resepsionis extends Model
 {
     protected $fillable = [
+        'tgl_cekin',
+        'tgl_cekout',
+        'jml_kamar',
         'nm_pemesan',
         'email',
         'no_hp',
         'nm_tamu',
         'tipekamar',
-        'tgl_cekin',
-        'tgl_cekout',
     ];
+
+    // public function reseps() 
+    // { 
+    //     return $this->hasMany(Tamu::class); 
+    // } 
 }

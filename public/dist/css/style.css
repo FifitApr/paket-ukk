@@ -1,0 +1,132 @@
+*{
+    font-family: 'EB Garamond', serif;
+}
+p{
+    font-size: large;
+}
+/* NAVBAR */
+.logo{
+    width: 125px;
+    height: 55px;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.navbar-nav{
+    margin-right: 15px;
+}
+.nav-link{
+    font-size: 17px;
+    color: #22577E;
+}
+.nav-link:hover{
+    font-weight: bolder;
+    color: #22577E;
+}
+.btn{
+    background-color: white;
+    border: #22577E solid 1px;
+    color: #22577E;
+    height:40px;
+}
+.btn:hover{
+    background-color: #22577E;
+    color: white;
+}
+
+/* HEADER */
+.header{
+    height: 100vh;
+    background: url("https://images.pexels.com/photos/1320679/pexels-photo-1320679.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box-header{
+    background-color: white;
+    margin-top: 30px;
+}
+.header-text{
+    font-weight: bolder;
+    font-size: 90px;
+    color: #22577E;
+    font-family: 'Poppins', sans-serif;
+}
+/* BOOK */
+.box-book{
+    background-color: white;
+    margin-top: -70px;
+    border-radius: 10px;
+    height: 9rem;
+    width: 60rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.form{
+    justify-content: center;
+}
+.btnn{
+    text-decoration: none;
+    background-color: white;
+    border: #22577E solid 1px;
+    color: #22577E;
+    height:40px;
+    margin-top: 31px;
+    border-radius: 5px;
+}
+.btnn:hover{
+    background-color: #22577E;
+    color: white;
+}
+.dropdown-item{
+    color: #22577E;
+}
+.dropdown-item:hover{
+    background-color: #22577E;
+    color: white;
+}
+/* ABOUT US */
+.box-about{
+    margin: 100px 100px;
+}
+.about-text{
+  text-align: center;
+}
+.about-text h2{
+    color: #22577E;
+}
+.box-about-1{
+    padding: 15px;
+    margin-right: 15px;
+    width: 50rem;
+    height: 275px;
+    border-right: gray 1px solid;
+}
+.box-img img{
+    margin-top: -13.5px;
+    width: 17rem;
+    height: 17rem;
+}
+.box-about-2 p{
+    text-align: justify;
+}
+/* FACILITY */
+.box-facility{
+    text-align: center;
+    color: white;
+    background-color: #22577E;
+    width: 98.78vw;
+    height: 100vh;
+    padding: 100px 100px;
+}
+.facility-img{
+    margin: 30px 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.facility-img img{
+    width: 14rem;
+    height: 14rem;
+    margin: 20px 20px;
+}
