@@ -1,10 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TamuController;
 use App\Http\Controllers\Admin_KamarController;
+use App\Http\Controllers\ResepsionisController;
 use App\Http\Controllers\Admin_FHotelController;
 use App\Http\Controllers\Admin_FKamarController;
-use App\Http\Controllers\ResepsionisController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,3 +64,17 @@ Route::get('/edit-resep/{id}', [ResepsionisController::class, 'edit']);
 Route::put('/update-resep/{id}', [ResepsionisController::class, 'update'])->name('update-resep');
 
 Route::delete('/delete-resep/{id}', [ResepsionisController::class, 'destroy']);
+
+// TAMU
+
+Route::get('/tamu', function () {
+    return view('Tamu.home');
+});
+
+Route::get('/book', [TamuController::class, 'index']);
+Route::get('/create-book', [TamuController::class, 'create']);
+Route::post('/save-book', [TamuController::class, 'store'])->name('save-book');
+
+Route::delete('/delete-book/{id}', [TamuController::class, 'destroy']);
+
+

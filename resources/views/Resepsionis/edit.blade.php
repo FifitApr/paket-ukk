@@ -11,6 +11,18 @@
                         {{ csrf_field() }}
                         @method('PUT')
                         <div class="mb-3">
+                            <label class="form-label">Check In</label>
+                            <input type="date" class="form-control" name="tgl_cekin" value="{{ $resep->tgl_cekin }}">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Check Out</label>
+                            <input type="date" class="form-control" name="tgl_cekout" value="{{ $resep->tgl_cekout }}">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Jumlah Kamar</label>
+                            <input type="number" class="form-control" name="jml_kamar" value="{{ $resep->jml_kamar }}">
+                        </div>
+                        <div class="mb-3">
                             <label class="form-label">Nama Pemesan</label>
                             <input type="text" class="form-control" name="nm_pemesan" value="{{ $resep->nm_pemesan }}">
                         </div>
@@ -34,14 +46,7 @@
                                 <option value="Deluxe">Deluxe</option>
                             </select>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Tanggal Check In</label>
-                            <input type="date" class="form-control" name="tgl_cekin" value="{{ $resep->tgl_cekin }}">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Tanggal Check Out</label>
-                            <input type="date" class="form-control" name="tgl_cekout" value="{{ $resep->tgl_cekout }}">
-                        </div>
+
                         <button type="submit" class="btn btn-primary">Simpan</button>
                     </form>
                 </div>

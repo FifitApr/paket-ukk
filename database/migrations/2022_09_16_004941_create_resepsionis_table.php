@@ -15,13 +15,14 @@ return new class extends Migration
     {
         Schema::create('resepsionis', function (Blueprint $table) {
             $table->id();
+            $table->string('tgl_cekin');
+            $table->string('tgl_cekout');
+            $table->string('jml_kamar');
             $table->string('nm_pemesan');
             $table->string('email');
             $table->string('no_hp');
             $table->string('nm_tamu');
             $table->string('tipekamar');
-            $table->string('tgl_cekin');
-            $table->string('tgl_cekout');
             $table->timestamps();
         });
     }
