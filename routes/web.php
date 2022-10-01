@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TamuController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ResepController;
 use App\Http\Controllers\Admin_KamarController;
 use App\Http\Controllers\ResepsionisController;
 use App\Http\Controllers\Admin_FHotelController;
@@ -18,11 +21,26 @@ use App\Http\Controllers\Admin_FKamarController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('Admin.kamar');
-// });
+Route::get('/', function () {
+    return view('login');
+});
+
+
+Route::get('login', [AuthController::class, 'index'])->name('login');
+Route::post('postlogin', [AuthController::class, 'postlogin'])->name('postlogin'); 
+
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::group(['middleware' => ['login:admin']], function () {
+        Route::get('admin', [AdminController::class, 'index']);
+    });
+    Route::group(['middleware' => ['login:resep']], function () {
+        Route::get('resep', [ResepController::class, 'index']);
+    });
+});
+
 //Admin Kamar
-Route::get('/', [Admin_KamarController::class, 'index']);
+Route::get('/kamar', [Admin_KamarController::class, 'index']);
 Route::get('/create-kamar', [Admin_KamarController::class, 'create']);
 Route::post('/save-kamar', [Admin_KamarController::class, 'store'])->name('simpan');
 
