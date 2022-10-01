@@ -112,3 +112,15 @@ h2{
     border: none;
     color: white;
 }
+/* footer */
+.footer{
+    background-color: #22577E;
+    width: 98.78vw;
+    height: 50px;
+    color: white;
+    text-align: center;
+}
+.footer p{
+    font-size: 17px;
+    padding-top: 10px;
+}

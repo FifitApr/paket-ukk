@@ -41,7 +41,7 @@ class Admin_KamarController extends Controller
             'jmlkamar' => $request->jmlkamar,
         ]);
 
-        return Redirect('/')->with('success', 'Data Berhasil Ditambahkan');
+        return Redirect('/kamar')->with('success', 'Data Berhasil Ditambahkan');
     }
 
     /**
@@ -83,7 +83,7 @@ class Admin_KamarController extends Controller
         $adminkamar=admin_kamar::findorfail($id);
         $adminkamar->update($request->all());
 
-        return Redirect('/')->with('success', 'Data Berhasil Diupdate');
+        return Redirect('/kamar')->with('success', 'Data Berhasil Diupdate');
     }
 
     /**

@@ -32,7 +32,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+        <a class="nav-link" data-widget="fullscreen" href="/logout" role="button">
           Logout
         </a>
       </li>
@@ -80,13 +80,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <li class="nav-item">
                 <a href="/fkamar" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Data Fasilitas Kamar</p>
+                  <p>Data Fasilitas Hotel</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="/fhotel" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Data Fasilitas Hotel</p>
+                  <p>Data Fasilitas Kamar</p>
                 </a>
               </li>
             </ul>

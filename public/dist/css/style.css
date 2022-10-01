@@ -53,38 +53,6 @@ nav{
     color: #22577E;
     font-family: 'Poppins', sans-serif;
 }
-/* BOOK */
-.box-book{
-    background-color: white;
-    margin-top: -70px;
-    border-radius: 10px;
-    height: 9rem;
-    width: 60rem;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-}
-.form{
-    justify-content: center;
-}
-.btnn{
-    text-decoration: none;
-    background-color: white;
-    border: #22577E solid 1px;
-    color: #22577E;
-    height:40px;
-    margin-top: 31px;
-    border-radius: 5px;
-}
-.btnn:hover{
-    background-color: #22577E;
-    color: white;
-}
-.dropdown-item{
-    color: #22577E;
-}
-.dropdown-item:hover{
-    background-color: #22577E;
-    color: white;
-}
 /* ABOUT US */
 .box-about{
     margin: 100px 100px;
@@ -116,8 +84,8 @@ nav{
     color: white;
     background-color: #22577E;
     width: 98.78vw;
-    height: 100vh;
-    padding: 100px 100px;
+    height: 42rem;
+    padding: 40px 100px;
 }
 .facility-img{
     margin: 30px 150px;
@@ -129,4 +97,60 @@ nav{
     width: 14rem;
     height: 14rem;
     margin: 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    border-radius: 5px;
+}
+/* ROOM */
+.tipe-room{
+    margin: 100px 150px;
+    
+}
+.room{
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.card-room img{
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    width: 600px;
+    height: 350px;
+}
+.room-text{
+    margin: 48px 0 0 50px;
+}
+.room-text h3{
+    margin-right: 40px;
+    width: 200px;
+    color: #22577E;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.room-text h5, li{
+    font-size: 16px;
+}
+.room-flex{
+    justify-content: space-evenly;
+}
+.btn-2{
+    text-decoration: none;
+    background-color: #22577E;
+    color: white;
+    height:40px;
+    margin-top: 10px;
+}
+.btn-2:hover{
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+/* footer */
+.footer{
+    background-color: #22577E;
+    width: 98.78vw;
+    height: 50px;
+    color: white;
+    text-align: center;
+}
+.footer p{
+    font-size: 17px;
+    padding-top: 10px;
 }
