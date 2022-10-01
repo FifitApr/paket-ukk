@@ -7,7 +7,7 @@
         <div class="col-8">
             <div class="card">
                 <div class="card-body">
-                    <form action="{{ route('update', $resep->id) }}" method="POST">
+                    <form action="{{ route('update-resep', $resep->id) }}" method="POST">
                         {{ csrf_field() }}
                         @method('PUT')
                         <div class="mb-3">
