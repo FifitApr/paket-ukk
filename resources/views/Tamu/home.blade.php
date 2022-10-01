@@ -44,9 +44,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#room">Room Type</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact Us</a>
-                    </li>
                 </ul>
                 <a href="/book" class="btn rounded-pill px-4 pt-2" type="submit">Book Now</a>
             </div>
@@ -122,15 +119,57 @@
 
     <!-- ACCOMODATION -->
 
+
+    <div class="tipe-room" id="room">
+        <div class="room">
+            <div class="card-room d-flex">
+                <img src="dist/img/kamar2.jpeg" alt="">
+                <div class="room-text">
+                    <div class="room-flex d-flex">
+                        <h3>Superior</h3>
+                        <a href="/book" class="btn-2 px-4 pt-2" type="submit">Book Now</a>
+                    </div>
+                    <h5>Fasilitas:</h5>
+                    <ul>
+                        <li>Kamar berukuran luas 32 m2</li>
+                        <li>Kamar mandi shower</li>
+                        <li>Coffee Maker</li>
+                        <li>AC</li>
+                        <li>LED TV 32 inch</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="room mt-5">
+            <div class="card-room d-flex">
+                <img src="dist/img/kamar3.jpeg" alt="">
+                <div class="room-text">
+                    <div class="room-flex d-flex">
+                        <h3>Deluxe</h3>
+                        <a href="/book" class="btn-2 px-4 pt-2" type="submit">Book Now</a>
+                    </div>
+                    <h5>Fasilitas:</h5>
+                    <ul>
+                        <li>Kamar berukuran luas 45 m2</li>
+                        <li>Kamar mandi shower dan Bath Tub</li>
+                        <li>Coffee Maker</li>
+                        <li>Sofa</li>
+                        <li>AC</li>
+                        <li>LED TV 40 inch</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- END ACCOMODATION -->
 
 
-    <!-- REVIEW -->
-
-    <!-- END REVIEW -->
-
-
     <!-- FOOTER -->
+
+    <div class="footer">
+        <p class="opacity-75">F&Q 2005 Copyright.</p>
+    </div>
 
     <!-- END FOOTER -->
 

@@ -32,12 +32,14 @@ Route::post('postlogin', [AuthController::class, 'postlogin'])->name('postlogin'
 
 Route::group(['middleware' => ['auth']], function () {
     Route::group(['middleware' => ['login:admin']], function () {
-        Route::get('admin', [AdminController::class, 'index']);
+        Route::get('admin', [Admin_KamarController::class, 'index']);
     });
     Route::group(['middleware' => ['login:resep']], function () {
-        Route::get('resep', [ResepController::class, 'index']);
+        Route::get('resep', [ResepsionisController::class, 'index']);
     });
 });
+
+Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 //Admin Kamar
 Route::get('/kamar', [Admin_KamarController::class, 'index']);

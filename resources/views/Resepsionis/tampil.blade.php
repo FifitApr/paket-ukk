@@ -13,7 +13,6 @@
                       {{ $message }}
                     </div>
                     @endif
-                    <a href="{{ url('create-resep') }}" class="btn btn-success">Tambah +</a>
 
                     {{-- table --}}
 
@@ -34,8 +33,8 @@
                           </tr>
                         </thead>
                         <tbody>
-                        @foreach ($tamu as $item)
-                            @foreach ($resep as $item)
+                        
+                            @foreach ($tamu as $item)
                             
                           <tr>
                             <th scope="row">{{ $loop->iteration }}</th>
@@ -55,7 +54,6 @@
                                 <button class="btn btn-danger">Hapus</button></form>
                             </td>
                           </tr>
-                          @endforeach
                           @endforeach
                         </tbody>
                       </table>

@@ -7,7 +7,7 @@
         <div class="col-10">
             <div class="card">
                 <div class="card-body">
-                    <h1 class="text-center">Data Fasilitas Hotel</h1>
+                    <h1 class="text-center">Data Fasilitas Kamar</h1>
                     @if ($message = Session::get('success'))
                     <div class="alert alert-success" role="alert">
                       {{ $message }}
