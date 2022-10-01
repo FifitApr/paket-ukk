@@ -37,12 +37,11 @@ class Admin_FHotelController extends Controller
     public function store(Request $request)
     {
         admin_fasilitas::create([
+            'tipekamar' => $request->tipekamar,
             'nm_fasilitas' => $request->nm_fasilitas,
-            'ket' => $request->ket,
-            'gambar' => $request->gambar,
         ]);
 
-        return Redirect('/fkamar')->with('success', 'Data Berhasil Ditambahkan');
+        return Redirect('/fhotel')->with('success', 'Data Berhasil Ditambahkan');
     }
 
     /**

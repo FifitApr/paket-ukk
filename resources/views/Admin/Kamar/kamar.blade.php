@@ -28,7 +28,7 @@
                           </tr>
                         </thead>
                         <tbody>
-                            @foreach ($adminkamar as $item)
+                            @foreach($adminkamar as $item)
                           <tr>
                             <th scope="row">{{ $loop->iteration }}</th>
                             <td>{{ $item->tipekamar }}</td>
