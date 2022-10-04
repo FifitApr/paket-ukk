@@ -11,4 +11,8 @@ class admin_fasilitas extends Model
         'tipekamar',
         'nm_fasilitas'
     ];
+
+    public function type(){
+        return $this->belongsTo(admin_kamar::class);
+    }
 }

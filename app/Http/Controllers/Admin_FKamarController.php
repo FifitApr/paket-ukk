@@ -37,21 +37,16 @@ class Admin_FKamarController extends Controller
      */
     public function store(Request $request)
     {
-        $adminfkamar = admin_fasilitaskamar::create($request->all());
-        if ($request->hasFile('gambar')) {
-            $request->file('gambar')->move ('fotonya/',$request->file('gambar')->getClientOriginalName());
-            $adminfkamar->gambar = $request->file('gambar')->getClientOriginalName();
-            $adminfkamar->save();
-        }
+        $datafkamar = admin_fasilitaskamar::create($request->all());
 
-        return Redirect('/fkamar');
-        // admin_fasilitaskamar::create([
-        //     'nm_fasilitas' => $request->nm_fasilitas,
-        //     'ket' => $request->ket,
-        //     'gambar' => $request->gambar,
-        // ]);
+        if($request->hasFile('gambar')){
+            $request->file('gambar')->move('public/foto/.', $request->file('gambar')->getClientOriginalName());
+            $datafkamar->gambar = $request->file('gambar')->getClientOriginalName();
+            $datafkamar->save();
+        }            
 
-        // return Redirect('/fkamar')->with('success', 'Data Berhasil Ditambahkan');
+
+        return Redirect('/fkamar')->with('success', 'Data Berhasil Ditambahkan');
     }
 
     /**
