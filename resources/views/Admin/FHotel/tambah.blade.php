@@ -9,14 +9,17 @@
                 <div class="card-body">
                     <form action="{{ route('simpan-fhotel') }}" method="POST">
                         {{ csrf_field() }}
+
                         <div class="mb-3">
                             <label class="form-label">Tipe Kamar</label>
                             <select name="tipekamar" class="form-select form-control" id="">
                                 <option selected>Pilih tipe kamar</option>
-                                <option value="Superior">Superior</option>
-                                <option value="Deluxe">Deluxe</option>
+                                @foreach ($room as $item)
+                                <option value="{{ $item->tipekamar }}">{{ $item->tipekamar }}</option>
+                                @endforeach
                             </select>
                         </div>
+
                         <div class="mb-3">
                             <label class="form-label">Nama Fasilitas</label>
                             <input type="text" class="form-control" name="nm_fasilitas">

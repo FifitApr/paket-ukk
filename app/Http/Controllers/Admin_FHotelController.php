@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\admin_fasilitas;
+use App\Models\admin_kamar;
 use Illuminate\Http\Request;
 
 class Admin_FHotelController extends Controller
@@ -25,7 +26,9 @@ class Admin_FHotelController extends Controller
      */
     public function create()
     {
-        return view('Admin.FHotel.tambah');
+
+        $room = admin_kamar::all();
+        return view('Admin.FHotel.tambah', compact('room'));
     }
 
     /**
