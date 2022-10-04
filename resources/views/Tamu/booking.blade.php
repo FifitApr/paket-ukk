@@ -87,7 +87,7 @@
                 </div>
 
                 <div class="box-form">
-                <div class="mb-3 mx-3">
+                    <div class="mb-3 mx-3">
                         <label class="form-label">Customer Name</label>
                         <input type="text" class="form-control" name="nm_pemesan">
                     </div>
@@ -104,13 +104,13 @@
                         <input type="text" class="form-control" name="nm_tamu">
                     </div>
                     <div class="mb-3 mx-3">
-                            <label class="form-label">Room Type</label>
-                            <select name="tipekamar" class="form-select form-control" id="">
-                                <option selected>Room Type</option>
-                                <option value="Superior">Superior</option>
-                                <option value="Deluxe">Deluxe</option>
-                            </select>
-                        </div>
+                        <label class="form-label">Room Type</label>
+                        <select name="tipekamar" class="form-select form-control" id="">
+                            <option selected>Room Type</option>
+                            <option value="Superior">Superior</option>
+                            <option value="Deluxe">Deluxe</option>
+                        </select>
+                    </div>
                     <button type="submit" class="btn mb-3">Booking Confirmation</button>
                 </div>
             </form>
@@ -121,49 +121,54 @@
     <!-- TABLE -->
 
     <center>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">No.</th>
-                <th scope="col">Check In</th>
-                <th scope="col">Check Out</th>
-                <th scope="col">Number of Room</th>
-                <th scope="col">Customer Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Phone Number</th>
-                <th scope="col">Guest Name</th>
-                <th scope="col">Room Type</th>
-                <th scope="col">Option</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($tamu as $item)
-            <tr>
-                <th scope="row">{{ $loop->iteration }}</th>
-                <td>{{ $item->tgl_cekin }}</td>
-                <td>{{ $item->tgl_cekout }}</td>
-                <td>{{ $item->jml_kamar }}</td>
-                <td>{{ $item->nm_pemesan }}</td>
-                <td>{{ $item->email }}</td>
-                <td>{{ $item->no_hp }}</td>
-                <td>{{ $item->nm_tamu }}</td>
-                <td>{{ $item->tipekamar }}</td>
-                <td>
-                    <form action="{{ url('delete-book',$item->id) }}" method="POST">
-                        @csrf
-                        @method('delete')
-                        <button class="btnnn">Delete</button></form>
-                </td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Check In</th>
+                    <th scope="col">Check Out</th>
+                    <th scope="col">Number of Room</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone Number</th>
+                    <th scope="col">Guest Name</th>
+                    <th scope="col">Room Type</th>
+                    <th scope="col">Option</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($tamu as $item)
+                <tr>
+                    <th scope="row">{{ $loop->iteration }}</th>
+                    <td>{{ $item->tgl_cekin }}</td>
+                    <td>{{ $item->tgl_cekout }}</td>
+                    <td>{{ $item->jml_kamar }}</td>
+                    <td>{{ $item->nm_pemesan }}</td>
+                    <td>{{ $item->email }}</td>
+                    <td>{{ $item->no_hp }}</td>
+                    <td>{{ $item->nm_tamu }}</td>
+                    <td>{{ $item->tipekamar }}</td>
+                    <td>
+                        <form action="{{ url('delete-book',$item->id) }}" method="POST">
+                            @csrf
+                            @method('delete')
+                            <button class="btnnn">Delete</button></form>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
     </center>
     <!-- END TABLE -->
 
     <!-- FOOTER -->
 
+    <div class="footer">
+        <p class="opacity-75">F&Q 2005 Copyright.</p>
+    </div>
+
     <!-- END FOOTER -->
+
 
 
 

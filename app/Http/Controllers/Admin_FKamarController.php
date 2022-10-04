@@ -15,7 +15,7 @@ class Admin_FKamarController extends Controller
      */
     public function index()
     {
-        $adminfkamar =admin_fasilitaskamar::all();
+        $adminfkamar = admin_fasilitaskamar::all();
         return view('Admin.FKamar.fkamar', compact('adminfkamar'));
     }
 

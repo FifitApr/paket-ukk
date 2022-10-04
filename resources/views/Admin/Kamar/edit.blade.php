@@ -20,7 +20,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Jumlah Kamar</label>
-                            <input type="number" class="form-control" name="jmlkamar" value="{{ $adminkamar->jml_kamar }}">
+                            <input type="number" class="form-control" name="jmlkamar" value="{{ $adminkamar->jmlkamar }}">
                             @error('jmlkamar')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
