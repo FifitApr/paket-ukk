@@ -11,4 +11,8 @@ class admin_kamar extends Model
         'tipekamar',
         'jmlkamar'
     ];
+
+    public function types(){
+        return $this->HasMany(admin_fasilitas::class);
+    }
 }
