@@ -40,7 +40,7 @@ class Admin_FKamarController extends Controller
         $datafkamar = admin_fasilitaskamar::create($request->all());
 
         if($request->hasFile('gambar')){
-            $request->file('gambar')->move('public/foto/.', $request->file('gambar')->getClientOriginalName());
+            $request->file('gambar')->move('public/fotonya/.', $request->file('gambar')->getClientOriginalName());
             $datafkamar->gambar = $request->file('gambar')->getClientOriginalName();
             $datafkamar->save();
         }            

@@ -35,7 +35,7 @@
                             <td>{{ $item->nm_fasilitas }}</td>
                             <td>{{ $item->ket }}</td>
                             <td>
-                            <img src="{{ asset('public/foto/'.$item->gambar) }}" alt="" style="width: 100px">
+                            <img src="{{ asset('public/fotonya/'.$item->gambar) }}" alt="" style="width: 100px">
                             </td>
                             <td>
                                 <a href="{{url('edit-fkamar', $item->id)}}" class="btn btn-warning">Edit</a>

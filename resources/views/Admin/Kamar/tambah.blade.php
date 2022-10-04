@@ -9,14 +9,12 @@
                 <div class="card-body">
                     <form action="{{ route('simpan') }}" method="POST">
                         {{ csrf_field() }}
+                        
                         <div class="mb-3">
                             <label class="form-label">Tipe Kamar</label>
-                            <select name="tipekamar" class="form-select form-control" id="">
-                                <option selected>Pilih tipe kamar</option>
-                                <option value="Superior">Superior</option>
-                                <option value="Deluxe">Deluxe</option>
-                            </select>
+                            <input type="text" class="form-control" name="tipekamar">
                         </div>
+
                         <div class="mb-3">
                             <label class="form-label">Jumlah Kamar</label>
                             <input type="number" class="form-control" name="jmlkamar">
